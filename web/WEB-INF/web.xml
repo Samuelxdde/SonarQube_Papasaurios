@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <!--
+        Sin esto, algunos servidores dependen de su propio valor por
+        defecto para decidir qué página mostrar en la raíz del sitio
+        (ej. http://localhost:8080/Cafeteriatalleres/). Declararlo
+        explícitamente asegura que SIEMPRE sea la página de inicio
+        (index.jsp) y no la de inicio de sesión.
+
+        Los servlets y filtros del proyecto siguen definidos con
+        anotaciones (@WebServlet, @WebFilter) en el código Java; este
+        archivo no los reemplaza, coexiste con ellos.
+    -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
